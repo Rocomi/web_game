@@ -1,0 +1,72 @@
+/* 전체 페이지 기본 설정 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 전체 컨테이너 스타일 */
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* 제목 스타일 */
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* 입력창 */
+input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 카테고리 라디오 버튼 */
+.categories {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* 버튼 */
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* 핑계 출력 카드 */
+.excuse-card {
+  margin-top: 1.5rem;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-style: italic;
+  min-height: 50px;
+}
