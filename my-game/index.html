@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>미니 게임 모음</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script> <!-- ✅ defer 추가로 오류 방지 -->
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 미니 게임 월드 🎮</h1>
+    
+    <div class="tabs">
+      <button class="tab-button" onclick="showTab('game1')">숫자 맞추기</button>
+      <button class="tab-button" onclick="showTab('game3')">색상 맞추기</button>
+      <button class="tab-button" onclick="showTab('game5')">틱택토</button>
+      <button class="tab-button" onclick="showTab('game6')">리액션 테스트</button>
+      <button class="tab-button" onclick="showTab('game7')">클릭 정밀도</button>
+    </div>
+
+    <div id="game1" class="tab-content">
+      <h2>숫자 맞추기</h2>
+      <p>1부터 100 사이의 숫자를 맞춰보세요!</p>
+      <input type="number" id="numberInput" placeholder="숫자 입력" />
+      <button onclick="checkNumberGuess()">맞추기</button>
+      <p id="numberResult"></p>
+    </div>
+
+    <div id="game3" class="tab-content">
+      <h2>색상 맞추기</h2>
+      <p>보이는 색상 이름을 맞춰보세요!</p>
+      <div id="colorBox"></div>
+      <input type="text" id="colorGuess" placeholder="색상 이름 입력(XXXX색)" />
+      <button onclick="checkColor()">확인</button>
+      <button onclick="showHint()">힌트 보기</button>
+      <button onclick="showAns()">정답 보기</button>
+      <p id="colorHint"></p>
+      <p id="colorResult"></p>
+    </div>
+
+    <div id="game5" class="tab-content">
+      <h2>틱택토 게임</h2>
+      <div class="ttt-wrapper">
+        <div id="ticTacToeBoard"></div>
+        <svg id="winLine" width="255" height="255"></svg>
+      </div>
+      <p id="ticTacToeStatus"></p>
+      <button onclick="resetTicTacToe()">다시 시작</button>
+    </div>
+
+    <div id="game6" class="tab-content">
+      <h2>리액션 테스트</h2>
+      <p id="reactionStatus">화면이 초록색으로 바뀌면 즉시 클릭하세요!</p>
+      <div id="reactionBox"></div>
+      <p id="reactionResult"></p>
+      <button onclick="startReactionTest()">시작</button>
+    </div>
+
+    <div id="game7" class="tab-content">
+      <h2>클릭 정밀도 게임</h2>
+      <p>10초 동안 최대한 많은 원을 클릭하세요!</p>
+      <button onclick="startClickAccuracy()">시작</button>
+      <div id="clickCountdown"></div>
+      <div id="clickTarget"></div>
+      <p id="clickScore">점수: 0</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+body {
+  font-family: sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.tab-button:hover {
+  background-color: navy;
+}
+
+.tab-content {
+  display: none;
+}
+
+#colorBox {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  border: 2px solid #333;
+}
+
+#game4 button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+/* 틱택토 게임 css*/
+#game5 {
+  text-align: center;
+}
+
+.ttt-wrapper {
+  position: relative;
+  width: 255px;
+  height: 255px;
+  margin: 20px auto;
+}
+
+#ticTacToeBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#winLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#winLine line {
+  stroke: red;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.tic-cell {
+  width: 80px;
+  height: 80px;
+  font-size: 2em;
+  text-align: center;
+  line-height: 80px;
+  border: 2px solid #333;
+  cursor: pointer;
+  background-color: #fff;
+  animation: pop 0.2s ease;
+}
+.tic-cell:hover {
+  background-color: #f0f0f0;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+#game5 {
+  position: relative;
+}
+
+#winLine line {
+  stroke: red;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+#winLine line {
+  stroke: red;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;     /* 끝: 전부 보임 */
+  }
+}
+
+/* 리액션 박스 */
+#reactionBox {
+  width: 300px;
+  height: 150px;
+  background-color: red;
+  margin: 20px auto;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* 클릭 타겟 원 */
+#clickTarget {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* 카운트다운 */
+#clickCountdown {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 600px;
+  font-weight: bold;
+  color: crimson;
+  z-index: 500;
+  display: none;
+  pointer-events: none;
+}
